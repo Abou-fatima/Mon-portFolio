@@ -17,7 +17,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background:linear-gradient(35deg, #cd81e9 0%,#f0aa7b 50%,  #e68337 100%);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 0;
@@ -40,7 +40,7 @@
         }
 
         nav a:hover {
-            color: #667eea;
+            color: #f3f3f3;
             transform: translateY(-2px);
         }
 
@@ -91,10 +91,26 @@
             animation: fadeInUp 1s ease-out;
         }
 
+        .dev{
+            animation: dev 1s linear;
+        }
+
+        @keyframes dev {
+            from {
+                opacity: 0;
+                transform: translateX(600px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateX(-100px);
             }
             to {
                 opacity: 1;
@@ -120,7 +136,7 @@
         .cta-button {
             display: inline-block;
             padding: 1rem 2rem;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #be65e0, #764ba2);
             color: white;
             text-decoration: none;
             border-radius: 50px;
@@ -215,6 +231,7 @@
         .skill-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
         }
 
         .skill-bar {
@@ -238,8 +255,10 @@
 
         .skill-progress.html { width: 90%; }
         .skill-progress.css { width: 85%; }
-        .skill-progress.js { width: 75%; }
-        .skill-progress.react { width: 70%; }
+        .skill-progress.js { width: 50%; }
+        .skill-progress.react { width: 25%; }
+        .skill-progress.laravel { width: 55%; }
+        .skill-progress.bootsrap { width: 75%; }
 
         /* Projects Section */
         .projects-grid {
@@ -261,6 +280,7 @@
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
         }
 
         .project-image {
@@ -358,7 +378,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Animations CSS pures */
+        /* Animations CSS*/
         .fade-in {
             animation: fadeInUp 1s ease-out;
         }
