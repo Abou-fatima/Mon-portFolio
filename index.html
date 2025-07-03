@@ -8,7 +8,12 @@
 </head>
 <body>
     <nav>
-        <ul>
+        <button class="burger" id="burger-menu" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="nav-links">
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#apropos">À propos</a></li>
             <li><a href="#competences">Compétences</a></li>
@@ -22,6 +27,7 @@
             <h1>Alpha Ousmane Bah</h1>
             <p class="dev">Développeur Web</p>
             <a href="#apropos" class="cta-button">Découvrez mon travail</a>
+            <a href="CV.pdf" class="cta-button moncv">Télécharger mon CV</a>
         </div>
     </section>
 
@@ -30,7 +36,7 @@
         <div class="about fade-in">
             <div class="about-content">
                 <div >
-                    <img width="230" height="230" src="./AbouFatima11.jpg" alt="monImage" srcset="">
+                    <img width="230" height="230" src="images/AbouFatima11.jpg" alt="monImage" srcset="">
                 </div>
                 <div>
                     <h3>Passionné par le développement web</h3>
@@ -46,42 +52,60 @@
         <h2 class="section-title fade-in">Mes Compétences</h2>
         <div class="skills-grid">
             <div class="skill-card fade-in">
-                <h3>HTML5</h3>
+                <div class="skill-header">
+                    <img src="./images/HTML5.png" alt="HTML5" class="skill-icon" width="70" height="70">
+                    <h3>HTML5</h3>
+                </div>
                 <div class="skill-bar">
                     <div class="skill-progress html"></div>
                 </div>
                 <p>Structure et sémantique web moderne</p>
             </div>
             <div class="skill-card fade-in">
-                <h3>CSS3</h3>
+                <div class="skill-header">
+                    <img src="./images/css3.png" alt="CSS3" class="skill-icon" width="70" height="70">
+                    <h3>CSS3</h3>
+                </div>
                 <div class="skill-bar">
                     <div class="skill-progress css"></div>
                 </div>
                 <p>Design responsive et animations</p>
             </div>
             <div class="skill-card fade-in">
-                <h3>JavaScript</h3>
+                <div class="skill-header">
+                    <img src="./images/js.png" alt="JavaScript" class="skill-icon" width="70" height="70">
+                    <h3>JavaScript</h3>
+                </div>
                 <div class="skill-bar">
                     <div class="skill-progress js"></div>
                 </div>
                 <p>Interactivité et logique applicative</p>
             </div>
             <div class="skill-card fade-in">
-                <h3>Laravel</h3>
+                <div class="skill-header">
+                    <img src="./images/laravel.png" alt="Laravel" class="skill-icon" width="70" height="70">
+                    <h3>Laravel</h3>
+                </div>
                 <div class="skill-bar">
                     <div class="skill-progress laravel"></div>
                 </div>
                 <p>Applications web back-end</p>
             </div>
             <div class="skill-card fade-in">
-                <h3>Bootsrap</h3>
+                <div class="skill-header">
+                    <img src="./images/bootstrap.jpg" alt="Bootstrap" class="skill-icon" width="70" height="70">
+                    <h3>Bootsrap</h3>
+                </div>
                 <div class="skill-bar">
                     <div class="skill-progress bootsrap"></div>
                 </div>
                 <p>Framework CSS responsive</p>
             </div>
             <div class="skill-card fade-in">
-                <h3>React Js</h3>
+                <div class="skill-header">
+                    <img src="./images/react.jpg" alt="React Js" class="skill-icon" width="70" height="70">
+                    <h3>React Js</h3>
+                </div>
                 <div class="skill-bar">
                     <div class="skill-progress react"></div>
                 </div>
@@ -159,5 +183,15 @@
     <footer>
         <p>&copy; 2025 Abou fatima. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        // Menu burger responsive
+        const burger = document.getElementById('burger-menu');
+        const navLinks = document.getElementById('nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            burger.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
