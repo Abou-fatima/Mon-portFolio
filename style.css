@@ -270,6 +270,7 @@
         .skill-progress.react { --progress: 75%; }
         .skill-progress.tailwind { --progress: 50%; }
         .skill-progress.wordpress { --progress: 45%; }
+        .skill-progress.git { --progress: 50%; }
 
         /* Projects Section responsive */
         .projects-grid {
