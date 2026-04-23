@@ -72,3 +72,13 @@ function initCarousel(container) {
     // Initialisation de la position
     moveToSlide(0);
 }
+
+
+ (function() {
+            const waButton = document.querySelector('.whatsapp-float');
+            if(waButton) {
+                waButton.addEventListener('click', function(e) {
+                    console.log('WhatsApp flottant : redirection vers le compte professionnel');
+                });
+            }
+        })();

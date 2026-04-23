@@ -1329,3 +1329,88 @@
         padding: 0.4rem 0.8rem;
     }
 }
+
+
+
+.whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: #25D366;
+            color: white;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 34px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.25s ease-in-out;
+            text-decoration: none;
+            backdrop-filter: blur(0px);
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Animation douce et effet de survie */
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-3px);
+            background-color: #20b057;
+            box-shadow: 0 12px 24px rgba(37, 211, 102, 0.35);
+            color: white;
+        }
+        
+        /* Petite onde au clic (feedback) */
+        .whatsapp-float:active {
+            transform: scale(0.96);
+            transition: 0.05s;
+        }
+        
+        /* Adaptation responsive : taille légèrement réduite sur mobiles */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                font-size: 28px;
+                bottom: 18px;
+                right: 18px;
+            }
+        }
+        
+        /* Ajustement si la zone de contact est très basse, le bouton reste bien visible */
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                font-size: 26px;
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+        
+        /* Pour éviter tout conflit z-index avec d'autres éléments éventuels */
+        .whatsapp-float i {
+            pointer-events: none;
+        }
+        
+        /* Option : améliorer le focus pour accessibilité clavier */
+        .whatsapp-float:focus-visible {
+            outline: 3px solid #fff;
+            outline-offset: 2px;
+            background-color: #1e9e4b;
+            transform: scale(1.02);
+        }
+        
+        /* petite sécurité pour les sections existantes : aucun impact sur le layout */
+        body {
+            scroll-behavior: smooth;
+        }
+        
+        /* Pour garantir que le footer ne cache pas le bouton (déjà en fixed, mais espace suffisant) */
+        footer {
+            position: relative;
+            z-index: 1;
+        }
