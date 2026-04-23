@@ -10,6 +10,10 @@
             color: #fff;
             overflow-x: hidden;
             line-height: 1.6;
+             -webkit-user-select: none;   /* Safari */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* IE/Edge */
+            user-select: none;   
         }
 
         /* Navigation responsive */
@@ -22,6 +26,20 @@
             z-index: 1000;
             padding: 0.8rem 1rem;
             transition: all 0.3s ease;
+        }
+
+         img, svg, video, iframe {
+            -webkit-user-drag: none;
+            user-drag: none;
+            pointer-events: auto; /* garde les clics, mais empêche le glisser */
+        }
+
+         /* Empêche l'affichage du curseur de sélection */
+        ::selection {
+            background: transparent;
+        }
+        ::-moz-selection {
+            background: transparent;
         }
 
         nav ul {
@@ -1413,4 +1431,29 @@
         footer {
             position: relative;
             z-index: 1;
+        }
+.whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: #25D366;
+            color: white;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            background-color: #20b057;
+        }
+        @media (max-width: 768px) {
+            .whatsapp-float { width: 52px; height: 52px; font-size: 28px; bottom: 18px; right: 18px; }
         }

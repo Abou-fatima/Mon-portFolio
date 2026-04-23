@@ -82,3 +82,50 @@ function initCarousel(container) {
                 });
             }
         })();
+
+
+
+
+
+         (function() {
+            // Bloque le clic droit (déjà fait via attribut, mais sécurité supplémentaire)
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Bloque les raccourcis clavier malveillants pour copier / sauvegarder / devtools
+            document.addEventListener('keydown', function(e) {
+                // Ctrl+C, Ctrl+X, Ctrl+V, Ctrl+U, Ctrl+S, F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+Shift+K
+                if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || 
+                                  e.key === 'v' || e.key === 'V' || e.key === 'u' || e.key === 'U' || 
+                                  e.key === 's' || e.key === 'S')) {
+                    e.preventDefault();
+                    return false;
+                }
+                // Empêche F12 (console), Ctrl+Shift+I (inspecteur), Ctrl+Shift+J (console), Ctrl+Shift+C (sélecteur)
+                if (e.key === 'F12' || 
+                    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c'))) {
+                    e.preventDefault();
+                    return false;
+                }
+                // Empêche également la touche "Impr écran" simple (mais difficile à bloquer totalement)
+                if (e.key === 'PrintScreen') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Bloque Ctrl+P impression (optionnel)
+                if (e.ctrlKey && (e.key === 'p' || e.key === 'P')) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // Désactive le drag & drop sur toutes les images pour éviter la copie par glisser-déposer
+            window.addEventListener('dragstart', function(e) {
+                if (e.target.tagName === 'IMG' || e.target.closest('img')) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        })();
