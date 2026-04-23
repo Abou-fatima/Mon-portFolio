@@ -1457,3 +1457,128 @@
         @media (max-width: 768px) {
             .whatsapp-float { width: 52px; height: 52px; font-size: 28px; bottom: 18px; right: 18px; }
         }
+
+
+
+
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        img, svg {
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
+        ::selection {
+            background: transparent;
+        }
+        
+        /* ********** FILIGRANE ********** 
+           Deux couches : 
+           1) un motif répété en arrière-plan semi-transparent 
+           2) un texte fixe en bas à droite pour rappel 
+        */
+        
+        /* Motif en arrière-plan (diagonale discrète) */
+        body {
+            position: relative;
+            background-color: #fff; /* garde le background de base */
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;  /* permet de cliquer à travers */
+            z-index: 999;
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(0, 0, 0, 0.02) 0px,
+                rgba(0, 0, 0, 0.02) 2px,
+                transparent 2px,
+                transparent 8px,
+                rgba(0, 0, 0, 0.01) 8px,
+                rgba(0, 0, 0, 0.01) 10px,
+                transparent 10px,
+                transparent 30px
+            );
+            /* dessine un motif très léger, quasi invisible sur l'écran mais visible en photo */
+        }
+        
+        /* Filigrane texte fixe en bas à droite (semi-transparent, non cliquable) */
+        .watermark-fixed {
+            position: fixed;
+            bottom: 16px;
+            right: 100px;  /* à côté du bouton WhatsApp */
+            font-family: monospace;
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.2);
+            background: rgba(255,255,240,0.1);
+            padding: 4px 10px;
+            border-radius: 30px;
+            backdrop-filter: blur(2px);
+            pointer-events: none;
+            z-index: 1001;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        
+        /* second watermark discret sur les bords (optionnel) */
+        .watermark-bg-text {
+            position: fixed;
+            bottom: 30%;
+            right: 20px;
+            transform: rotate(-90deg);
+            font-size: 70px;
+            font-weight: bold;
+            color: rgba(0,0,0,0.03);
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 998;
+            font-family: Arial, sans-serif;
+            letter-spacing: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .watermark-fixed {
+                right: 80px;
+                font-size: 10px;
+                bottom: 12px;
+            }
+            .watermark-bg-text {
+                font-size: 40px;
+                bottom: 40%;
+            }
+        }
+        
+        /* Le bouton WhatsApp existe déjà, on le garde */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: #25D366;
+            color: white;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            z-index: 1002;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            background-color: #20b057;
+        }
+        @media (max-width: 768px) {
+            .whatsapp-float { width: 52px; height: 52px; font-size: 28px; bottom: 18px; right: 18px; }
+        }

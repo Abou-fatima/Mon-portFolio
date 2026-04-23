@@ -129,3 +129,18 @@ function initCarousel(container) {
                 }
             });
         })();
+
+
+
+(function() {
+            // Blocage clic droit et raccourcis copie
+            document.addEventListener('contextmenu', e => e.preventDefault());
+            document.addEventListener('keydown', e => {
+                if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'v' || e.key === 'V' || e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) e.preventDefault();
+                if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C'))) e.preventDefault();
+                if (e.key === 'PrintScreen') e.preventDefault();
+                if (e.ctrlKey && (e.key === 'p' || e.key === 'P')) e.preventDefault();
+            });
+            window.addEventListener('dragstart', e => { if(e.target.tagName === 'IMG') e.preventDefault(); });
+            console.log("🔒 Filigrane + protections actives. Les captures d'écran externes afficheront le watermark.");
+        })();

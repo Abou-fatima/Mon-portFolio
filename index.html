@@ -7,10 +7,15 @@
     <link rel="icon" type="image/jpg" href="images/AbouFatima.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
+   
 </head>
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false">
-    <!-- Barre de navigation identique -->
+
+    <!-- FILIGRANES VISIBLES (ajoutés directement dans le DOM) -->
+    <div class="watermark-fixed">© Alpha Ousmane Bah | Portfolio protégé</div>
+    <div class="watermark-bg-text">Alpha Dev</div>
+
+    <!-- Navigation -->
     <nav>
         <button class="burger" id="burger-menu" aria-label="Ouvrir le menu">
             <span></span>
@@ -58,7 +63,7 @@
         </div>
     </section>
 
-    <!-- SECTION COMPÉTENCES -->
+    <!-- SECTION COMPÉTENCES (inchangée) -->
     <section id="competences">
         <h2 class="section-title fade-in">Mes Compétences</h2>
         <div class="skills-grid">
@@ -67,9 +72,7 @@
                     <img src="./images/HTML5.png" alt="HTML5" class="skill-icon" width="70" height="70">
                     <h3>HTML5</h3>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress html"></div>
-                </div>
+                <div class="skill-bar"><div class="skill-progress html"></div></div>
                 <p>Structure et sémantique web moderne</p>
             </div>
             <div class="skill-card fade-in">
@@ -77,9 +80,7 @@
                     <img src="./images/css3.png" alt="CSS3" class="skill-icon" width="70" height="70">
                     <h3>CSS3</h3>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress css"></div>
-                </div>
+                <div class="skill-bar"><div class="skill-progress css"></div></div>
                 <p>Design responsive et animations</p>
             </div>
             <div class="skill-card fade-in">
@@ -87,9 +88,7 @@
                     <img src="./images/js.png" alt="JavaScript" class="skill-icon" width="70" height="70">
                     <h3>JavaScript</h3>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress js"></div>
-                </div>
+                <div class="skill-bar"><div class="skill-progress js"></div></div>
                 <p>Interactivité et logique applicative</p>
             </div>
             <div class="skill-card fade-in">
@@ -97,9 +96,7 @@
                     <img src="./images/bootstrap.jpg" alt="Bootstrap" class="skill-icon" width="70" height="70">
                     <h3>Bootsrap</h3>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress bootsrap"></div>
-                </div>
+                <div class="skill-bar"><div class="skill-progress bootsrap"></div></div>
                 <p>Framework CSS responsive</p>
             </div>
             <div class="skill-card fade-in">
@@ -107,9 +104,7 @@
                     <img src="./images/react.jpg" alt="React Js" class="skill-icon" width="70" height="70">
                     <h3>React Js</h3>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress react"></div>
-                </div>
+                <div class="skill-bar"><div class="skill-progress react"></div></div>
                 <p>Framework JavaScript Front-end</p>
             </div>
             <div class="skill-card fade-in">
@@ -117,9 +112,7 @@
                     <img src="./images/OIP.jpeg" alt="Tailwind CSS" class="skill-icon" width="70" height="70">
                     <h3>Tailwind CSS</h3>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress tailwind"></div>
-                </div>
+                <div class="skill-bar"><div class="skill-progress tailwind"></div></div>
                 <p>Framework CSS front-end</p>
             </div>
             <div class="skill-card fade-in">
@@ -127,9 +120,7 @@
                     <img src="./images/OIP%20(1).jpeg" alt="WordPress" class="skill-icon" width="70" height="70">
                     <h3>WordPress</h3>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress wordpress"></div>
-                </div>
+                <div class="skill-bar"><div class="skill-progress wordpress"></div></div>
                 <p>Creation des sites web rapidement</p>
             </div>
             <div class="skill-card fade-in">
@@ -137,9 +128,7 @@
                     <img src="./images/git.png" alt="Git" class="skill-icon" width="70" height="70">
                     <h3>Git/Github</h3>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress git"></div>
-                </div>
+                <div class="skill-bar"><div class="skill-progress git"></div></div>
                 <p>Versionnement des projets</p>
             </div>
             <div class="skill-card fade-in">
@@ -147,9 +136,7 @@
                     <img src="./images/laravel.png" alt="Laravel" class="skill-icon" width="70" height="70">
                     <h3>PHP Laravel</h3>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress php"></div>
-                </div>
+                <div class="skill-bar"><div class="skill-progress php"></div></div>
                 <p>Developpement backend</p>
             </div>
             <div class="skill-card fade-in">
@@ -157,19 +144,15 @@
                     <img src="./images/Flutter-feature.png" alt="Flutter" class="skill-icon" width="70" height="70">
                     <h3>Flutter-Dart</h3>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress mobile"></div>
-                </div>
+                <div class="skill-bar"><div class="skill-progress mobile"></div></div>
                 <p>Developpement Mobile</p>
             </div>
         </div>
     </section>
 
-    <!-- SECTION PROJETS -->
+    <!-- SECTION PROJETS (identique) -->
     <section id="projets">
         <h2 class="section-title fade-in">Mes Projets</h2>
-
-        <!-- Projets Front-End -->
         <div class="project-category">
             <h3 class="category-title">Projets Front-End</h3>
             <div class="projects-grid">
@@ -178,11 +161,7 @@
                     <div class="project-info">
                         <h3>Portfolio Personnel</h3>
                         <p>Site web personnel responsive avec animations CSS et JavaScript moderne.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
+                        <div class="project-tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
                         <a href="https://github.com/Abou-fatima/Mon-portFolio.git" target="_blank" class="github-link">Voir sur GitHub ↗</a>
                     </div>
                 </div>
@@ -191,11 +170,7 @@
                     <div class="project-info">
                         <h3>Quiz en JavaScript</h3>
                         <p>Interface intuitive pour s'exercer avec les bases de JS.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
+                        <div class="project-tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
                         <a href="https://github.com/Abou-fatima/Quiz-en-javaScript.git" target="_blank" class="github-link">Voir sur GitHub</a>
                     </div>
                 </div>
@@ -204,18 +179,12 @@
                     <div class="project-info">
                         <h3>Site web de docummentation</h3>
                         <p>Interface intuitive pour voir quelques documentations sur les langages.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
+                        <div class="project-tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
                         <a href="https://github.com/Abou-fatima/site_de_documentation.git" target="_blank" class="github-link">Voir sur GitHub</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Projets Full-Stack JS -->
         <div class="project-category">
             <h3 class="category-title">Projets Full-Stack JavaScript</h3>
             <div class="projects-grid">
@@ -224,12 +193,7 @@
                     <div class="project-info">
                         <h3>Application de Gestion de Stock</h3>
                         <p>Système complet de gestion d'entrée et sortie.</p>
-                        <div class="project-tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Express</span>
-                            <span class="tag">React</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
+                        <div class="project-tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">MongoDB</span></div>
                         <a href="#" target="_blank" class="github-link">Voir sur GitHub</a>
                     </div>
                 </div>
@@ -238,12 +202,7 @@
                     <div class="project-info">
                         <h3>Farmerconnect</h3>
                         <p>Plateforme pour la mise en réalisation entre les agriculteurs et acheteurs.</p>
-                        <div class="project-tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Tailwind</span>
-                        </div>
+                        <div class="project-tags"><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">React</span><span class="tag">Tailwind</span></div>
                         <a href="https://github.com/Abou-fatima/FarmerConnect.git" target="_blank" class="github-link">Voir sur GitHub</a>
                     </div>
                 </div>
@@ -252,19 +211,12 @@
                     <div class="project-info">
                         <h3>Gestion des taches</h3>
                         <p>Plateforme pour la mise en réalisation entre les agriculteurs et acheteurs.</p>
-                        <div class="project-tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Tailwind</span>
-                        </div>
+                        <div class="project-tags"><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">React</span><span class="tag">Tailwind</span></div>
                         <a href="https://github.com/Abou-fatima/gestionTaches.git" target="_blank" class="github-link">Voir sur GitHub</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Projets PHP/Laravel -->
         <div class="project-category">
             <h3 class="category-title">Projets PHP & Laravel</h3>
             <div class="projects-grid">
@@ -273,18 +225,12 @@
                     <div class="project-info">
                         <h3>Système de Gestion Scolaire</h3>
                         <p>Plateforme complète pour la gestion des élèves, professeurs et notes.</p>
-                        <div class="project-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Bootstrap</span>
-                        </div>
+                        <div class="project-tags"><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span></div>
                         <a href="#" target="_blank" class="github-link">Voir sur GitHub</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Projets Mobile -->
         <div class="project-category">
             <h3 class="category-title">Projets Mobile</h3>
             <div class="projects-grid">
@@ -293,11 +239,7 @@
                     <div class="project-info">
                         <h3>Application Météo</h3>
                         <p>Application pour afficher la météo actuelle de chaque région.</p>
-                        <div class="project-tags">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Dart</span>
-                            <span class="tag">API REST</span>
-                        </div>
+                        <div class="project-tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">API REST</span></div>
                         <a href="https://github.com/Abou-fatima/activite4api.git" target="_blank" class="github-link">Voir sur GitHub</a>
                     </div>
                 </div>
@@ -306,11 +248,7 @@
                     <div class="project-info">
                         <h3>EduSmart Projet finale D-CLIC</h3>
                         <p>Application mobile d'assistance scolaire intélligente.</p>
-                        <div class="project-tags">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Dart</span>
-                            <span class="tag">API REST</span>
-                        </div>
+                        <div class="project-tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">API REST</span></div>
                         <a href="https://github.com/Abou-fatima/Projet_final_D-CLIC.git" target="_blank" class="github-link">Voir sur GitHub</a>
                     </div>
                 </div>
@@ -318,92 +256,69 @@
         </div>
     </section>
 
-    <!-- SECTION LOGOS DESIGN -->
+    <!-- LOGOS + FIGMA (contenu identique, mais garde les carrousels) -->
     <section id="logos-design">
         <h2 class="section-title fade-in">Conceptions Graphiques</h2>
         <p class="section-subtitle fade-in">Logos créés avec Photoshop & Illustrator</p>
-
         <div class="carousel-container fade-in">
             <div class="carousel-track">
-                <div class="carousel-slide"><img src="logo/Abou.png" alt="Logo design 1" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/AbouFatima11.jpg" alt="Logo design 2" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/ACercle.png" alt="Logo design 3" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/AOB.png" alt="Logo design 4" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/AOBB.png" alt="Logo design 5" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/Avecpassion.jpg" alt="Logo design 6" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/Cercle.png" alt="Logo design 7" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/Cercles.png" alt="Logo design 8" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/CotesCotes.jpg" alt="Logo design 9" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/Creative.png" alt="Logo design 10" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/devoire3.jpg" alt="Logo design 11" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/ImqgeDansCercle.jpg" alt="Logo design 12" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/LOgo.png" alt="Logo design 13" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/Logo3D.jpg" alt="Logo design 14" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/LOGO4.jpg" alt="Logo design 15" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/LogoAob.png" alt="Logo design 16" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/LogoCercle.jpg" alt="Logo design 17" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/MONLOGO.jpg" alt="Logo design 18" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/Navigateur.PNG" alt="Logo design 19" loading="lazy"></div>
-                <div class="carousel-slide"><img src="logo/TPDEVOIRE.jpg" alt="Logo design 20" loading="lazy"></div>
+                <div class="carousel-slide"><img src="logo/Abou.png" alt="Logo 1"></div>
+                <div class="carousel-slide"><img src="logo/AbouFatima11.jpg" alt="Logo 2"></div>
+                <div class="carousel-slide"><img src="logo/ACercle.png" alt="Logo 3"></div>
+                <div class="carousel-slide"><img src="logo/AOB.png" alt="Logo 4"></div>
+                <div class="carousel-slide"><img src="logo/AOBB.png" alt="Logo 5"></div>
+                <div class="carousel-slide"><img src="logo/Avecpassion.jpg" alt="Logo 6"></div>
+                <div class="carousel-slide"><img src="logo/Cercle.png" alt="Logo 7"></div>
+                <div class="carousel-slide"><img src="logo/Cercles.png" alt="Logo 8"></div>
+                <div class="carousel-slide"><img src="logo/CotesCotes.jpg" alt="Logo 9"></div>
+                <div class="carousel-slide"><img src="logo/Creative.png" alt="Logo 10"></div>
+                <div class="carousel-slide"><img src="logo/devoire3.jpg" alt="Logo 11"></div>
+                <div class="carousel-slide"><img src="logo/ImqgeDansCercle.jpg" alt="Logo 12"></div>
+                <div class="carousel-slide"><img src="logo/LOgo.png" alt="Logo 13"></div>
+                <div class="carousel-slide"><img src="logo/Logo3D.jpg" alt="Logo 14"></div>
+                <div class="carousel-slide"><img src="logo/LOGO4.jpg" alt="Logo 15"></div>
+                <div class="carousel-slide"><img src="logo/LogoAob.png" alt="Logo 16"></div>
+                <div class="carousel-slide"><img src="logo/LogoCercle.jpg" alt="Logo 17"></div>
+                <div class="carousel-slide"><img src="logo/MONLOGO.jpg" alt="Logo 18"></div>
+                <div class="carousel-slide"><img src="logo/Navigateur.PNG" alt="Logo 19"></div>
+                <div class="carousel-slide"><img src="logo/TPDEVOIRE.jpg" alt="Logo 20"></div>
             </div>
-            <button class="carousel-btn prev" aria-label="Image précédente">❮</button>
-            <button class="carousel-btn next" aria-label="Image suivante">❯</button>
-            <div class="carousel-indicators">
-                <button class="indicator active"></button><button class="indicator"></button><button class="indicator"></button><button class="indicator"></button>
-                <button class="indicator"></button><button class="indicator"></button><button class="indicator"></button><button class="indicator"></button>
-                <button class="indicator"></button><button class="indicator"></button><button class="indicator"></button><button class="indicator"></button>
-                <button class="indicator"></button><button class="indicator"></button><button class="indicator"></button><button class="indicator"></button>
-                <button class="indicator"></button><button class="indicator"></button><button class="indicator"></button><button class="indicator"></button>
-                <button class="indicator"></button>
-            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+            <div class="carousel-indicators"></div>
         </div>
     </section>
 
-    <!-- SECTION FIGMA -->
     <section id="figma-designs">
         <h2 class="section-title fade-in">Maquettes Figma</h2>
         <p class="section-subtitle fade-in">Prototypes et wireframes conçus avant développement</p>
         <div class="carousel-container fade-in">
             <div class="carousel-track">
-                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/1.png" alt="Maquette 1" loading="lazy"></div></div></div>
-                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/2.png" alt="Maquette 2" loading="lazy"></div></div></div>
-                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/3.png" alt="Maquette 3" loading="lazy"></div></div></div>
-                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/4.png" alt="Maquette 4" loading="lazy"></div></div></div>
-                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/5.png" alt="Maquette 5" loading="lazy"></div></div></div>
-                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/6.png" alt="Maquette 6" loading="lazy"></div></div></div>
-                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/7.png" alt="Maquette 7" loading="lazy"></div></div></div>
-                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/8.png" alt="Maquette 8" loading="lazy"></div></div></div>
+                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/1.png" alt="Figma 1"></div></div></div>
+                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/2.png" alt="Figma 2"></div></div></div>
+                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/3.png" alt="Figma 3"></div></div></div>
+                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/4.png" alt="Figma 4"></div></div></div>
+                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/5.png" alt="Figma 5"></div></div></div>
+                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/6.png" alt="Figma 6"></div></div></div>
+                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/7.png" alt="Figma 7"></div></div></div>
+                <div class="carousel-slide design-slide"><div class="design-card"><div class="design-preview"><img src="images/figma/8.png" alt="Figma 8"></div></div></div>
             </div>
             <button class="carousel-btn prev">❮</button>
             <button class="carousel-btn next">❯</button>
-            <div class="carousel-indicators">
-                <button class="indicator active"></button><button class="indicator"></button><button class="indicator"></button>
-                <button class="indicator"></button><button class="indicator"></button><button class="indicator"></button>
-                <button class="indicator"></button><button class="indicator"></button>
-            </div>
+            <div class="carousel-indicators"></div>
         </div>
     </section>
 
-    <!-- SECTION CONTACT -->
+    <!-- CONTACT -->
     <section id="contact">
         <h2 class="section-title fade-in">Contactez-moi</h2>
         <div class="contact fade-in">
             <p>Prêt à collaborer sur votre prochain projet ? N'hésitez pas à me contacter !</p>
             <div class="contact-info">
-                <div class="contact-item">
-                    <h3>📧 Email</h3>
-                    <a class="mail" href="mailto:aboufatima611@gmail.com" target="_blank">aboufatima611@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <h3>📱 Téléphone</h3>
-                    <a class="liens" href="tel:+224611546268" target="_blank">+224 611-54-62-68</a>
-                </div>
-                <div class="contact-item">
-                    <h3><a class="liens" href="https://www.linkedin.com/in/alpha-ousmane-bah-b43665288" target="_blank">💼 Linkedin</a></h3>
-                </div> 
-                <div class="contact-item">
-                    <a class="liens" href="https://github.com/Abou-fatima">🐙 Github</a>
-                </div>
+                <div class="contact-item"><h3>📧 Email</h3><a href="mailto:aboufatima611@gmail.com">aboufatima611@gmail.com</a></div>
+                <div class="contact-item"><h3>📱 Téléphone</h3><a href="tel:+224611546268">+224 611-54-62-68</a></div>
+                <div class="contact-item"><h3><a href="https://www.linkedin.com/in/alpha-ousmane-bah-b43665288" target="_blank">💼 Linkedin</a></h3></div>
+                <div class="contact-item"><a href="https://github.com/Abou-fatima">🐙 Github</a></div>
             </div>
         </div>
     </section>
@@ -412,16 +327,15 @@
         <p>&copy;<script>document.write(new Date().getFullYear());</script> Alpha Dev. Tous droits réservés.</p>
     </footer>
 
-    <!-- BOUTON WHATSAPP FLOTTANT FIXE (toujours fonctionnel) -->
+    <!-- BOUTON WHATSAPP -->
     <a href="https://wa.me/224611546268?text=Bonjour%20Alpha%2C%20je%20viens%20de%20voir%20votre%20portfolio%20et%20je%20souhaite%20échanger%20avec%20vous." 
        class="whatsapp-float" 
        target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="Discuter sur WhatsApp">
+       rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-
+    <!-- Inclure votre script.js existant pour les carrousels et animations -->
     <script src="./script.js"></script>
 </body>
 </html>
