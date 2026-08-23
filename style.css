@@ -291,6 +291,7 @@
         .skill-progress.git { --progress: 90%; }
         .skill-progress.php { --progress: 80%; }
         .skill-progress.mobile { --progress: 75%; }
+.skill-progress.python { --progress: 75%; }
 
         /* Projects Section responsive */
         .projects-grid {
